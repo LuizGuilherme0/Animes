@@ -19,11 +19,11 @@ let listaCarros = [
 listaCarros.map((anime, posicao) => {
     let cardCarro = document.getElementById("cards");
     cardCarro.innerHTML += ` <div class="col-md-4">
-                <div class="card m-2">
+                <div class="card m-2" style="background-color:#212529;">
                     <img src="${anime.img}" class="card-img-top" height="200px" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">${anime.nome}</h5>
-                      <a href="#" class="btn btn-secondary" onclick="zoomImg('${posicao}')"><i class="bi bi-search"></i></a>
+                      <h5 class="card-title nome" style="margin-bottom:20px;">${anime.nome}</h5>
+                      <a href="#" class="btn btn-secondary descricao" onclick="zoomImg('${posicao}')">Ver mais <i class="bi bi-search"></i></a>
                     </div>
                   </div>
             </div>`
@@ -42,13 +42,17 @@ function zoomImg(posicao){
 
 function alterarTema(){
     let tema = document.querySelector("html").getAttribute("data-bs-theme");
+    let cor = document.getElementById("descricaoAnime");
 
     if(tema ==="dark"){
         document.querySelector("html").setAttribute("data-bs-theme","light");
         document.querySelector("#alterarTema").innerHTML=`<i class="bi bi-moon-fill"></i>`;
+        cor.style.cssText = "color: rgb(157, 109, 5)";
+        
     }
     else{
         document.querySelector("html").setAttribute("data-bs-theme","dark");
         document.querySelector("#alterarTema").innerHTML=`<i class="bi bi-brightness-high-fill"></i>`;
+        cor.style.cssText = "color:  #5b66e0";
     }
 }

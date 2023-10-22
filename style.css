@@ -1,3 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
+
+
 p#descricaoAnime{
     text-align: justify;
 }
+
+.nome{
+    color: rgb(220, 220, 7);
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+.title{
+    font-weight: bold;
+    font-family: 'Playpen Sans', cursive;
+}
+
+.descricao{
+    color: rgb(4, 248, 215);
+    font-family: 'Playpen Sans', cursive;
+}
+
+#nomeAnime{
+    color: rgb(220, 220, 7);
+}
+
+#descricaoAnime{
+    font-family: 'Playpen Sans', cursive;
+    font-weight: 200;
+} 
