@@ -1,4 +1,4 @@
-let listaCarros = [
+let listaAnimes = [
     {
         "nome": "Dragon Ball Super",
         "img": "img/dragon-ball-super-hd-wallpaper_LlIEmuFS.jpg",
@@ -16,9 +16,9 @@ let listaCarros = [
     }
 ]
 
-listaCarros.map((anime, posicao) => {
-    let cardCarro = document.getElementById("cards");
-    cardCarro.innerHTML += ` <div class="col-md-4">
+listaAnimes.map((anime, posicao) => {
+    let cardAnime = document.getElementById("cards");
+    cardAnime.innerHTML += ` <div class="col-md-4">
                 <div class="card m-2" style="background-color:#212529;">
                     <img src="${anime.img}" class="card-img-top" height="200px" alt="...">
                     <div class="card-body">
@@ -31,7 +31,7 @@ listaCarros.map((anime, posicao) => {
 });
 
 function zoomImg(posicao){  
-    let animeSelecionado = listaCarros[posicao];
+    let animeSelecionado = listaAnimes[posicao];
     document.getElementById("nomeAnime").innerHTML = animeSelecionado.nome;
     document.getElementById("descricaoAnime").innerHTML = animeSelecionado.descricao;
     document.getElementById("imgModal").src = animeSelecionado.img;
